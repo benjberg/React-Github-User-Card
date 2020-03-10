@@ -6,10 +6,12 @@ console.log('propsf', props)
     return (
         <div className='followCard'>
             {props.followers.map((item,index) => {
-                return (
+               console.log('item', item) 
+               return (
+                    
                     <div key={index}>
-                    <img src={props.followers.avatar_url}/>
-                    <h2>{item.followers.name}</h2>
+                    <img src={item.avatar_url}/>
+                    <h2>{item.login}</h2>
                     <p>{props.followers.login}</p>
                     </div>
             
