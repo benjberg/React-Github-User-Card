@@ -1,5 +1,8 @@
 import React from 'react';
-
+import {
+    Card, CardImg,  CardBody,
+    CardTitle
+  } from 'reactstrap';
 const GitFollow= props => {
 console.log('propsf', props)
    
@@ -9,12 +12,16 @@ console.log('propsf', props)
                console.log('item', item) 
                return (
                     
-                    <div key={index}>
-                    <img src={item.avatar_url}/>
-                    <h2>{item.login}</h2>
-                    <p>{props.followers.login}</p>
-                    </div>
+                   
+             <Card key={index}>
+             <CardImg top width="25%" src={item.avatar_url} alt="User profile" />
+             <CardBody>
+               <CardTitle>{item.login}</CardTitle>
+               
             
+             </CardBody>
+           </Card>
+         
                 )
             })
 

@@ -1,22 +1,31 @@
 import React from 'react';
-
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button
+  } from 'reactstrap';
+  
 const GitCard= props => {
 
    
         return (
-            <div className='userCard'>
-                <img src={props.user.avatar_url}/>
-                <h2>{props.user.name}</h2>
-                <p>{props.user.login}</p>
-                <p>Location: {props.user.location}</p>
-                <p>URL: {props.user.url}</p>
-                <p>Followers: {props.user.followers}</p>
-                <p>Following: {props.user.following}</p>
-                <p>Bio: {props.user.bio}</p>
+           
+                
+            
+      <Card>
+        <CardImg top width="25%" src={props.user.avatar_url} alt="Card image cap" />
+        <CardBody>
+          <CardTitle>{props.user.name}</CardTitle>
+          <CardSubtitle>{props.user.login}</CardSubtitle>
+          <CardText>Followers: {props.user.followers}</CardText>
+          <CardText>Following: {props.user.following}</CardText>
+          
+        </CardBody>
+      </Card>
+    
+  );
 
-
-            </div>
-        )
+            
+        
     
 }
 export default GitCard;
